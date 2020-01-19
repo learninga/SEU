@@ -1,0 +1,20 @@
+﻿  Polynomial.cpp
+e:\大一下\c++作业\2018.4.4实验三\ex4\ex4\polynomial.cpp(25): error C2065: “r”: 未声明的标识符
+e:\大一下\c++作业\2018.4.4实验三\ex4\ex4\polynomial.cpp(25): error C2228: “.coefficients”的左边必须有类/结构/联合
+  e:\大一下\c++作业\2018.4.4实验三\ex4\ex4\polynomial.cpp(25): note: 类型是“unknown-type”
+e:\大一下\c++作业\2018.4.4实验三\ex4\ex4\polynomial.cpp(26): error C2065: “maxTerms”: 未声明的标识符
+e:\大一下\c++作业\2018.4.4实验三\ex4\ex4\polynomial.cpp(26): error C2065: “r”: 未声明的标识符
+e:\大一下\c++作业\2018.4.4实验三\ex4\ex4\polynomial.cpp(26): error C2228: “.exponents”的左边必须有类/结构/联合
+  e:\大一下\c++作业\2018.4.4实验三\ex4\ex4\polynomial.cpp(26): note: 类型是“unknown-type”
+e:\大一下\c++作业\2018.4.4实验三\ex4\ex4\polynomial.cpp(28): error C2065: “r”: 未声明的标识符
+e:\大一下\c++作业\2018.4.4实验三\ex4\ex4\polynomial.cpp(28): error C2228: “.coefficients”的左边必须有类/结构/联合
+  e:\大一下\c++作业\2018.4.4实验三\ex4\ex4\polynomial.cpp(28): note: 类型是“unknown-type”
+e:\大一下\c++作业\2018.4.4实验三\ex4\ex4\polynomial.cpp(29): error C2065: “r”: 未声明的标识符
+e:\大一下\c++作业\2018.4.4实验三\ex4\ex4\polynomial.cpp(29): error C2228: “.exponents”的左边必须有类/结构/联合
+  e:\大一下\c++作业\2018.4.4实验三\ex4\ex4\polynomial.cpp(29): note: 类型是“unknown-type”
+e:\大一下\c++作业\2018.4.4实验三\ex4\ex4\polynomial.cpp(32): error C2065: “maxTerms”: 未声明的标识符
+e:\大一下\c++作业\2018.4.4实验三\ex4\ex4\polynomial.cpp(36): error C2065: “maxTerms”: 未声明的标识符
+e:\大一下\c++作业\2018.4.4实验三\ex4\ex4\polynomial.cpp(55): error C2059: 语法错误:“}”
+e:\大一下\c++作业\2018.4.4实验三\ex4\ex4\polynomial.cpp(55): error C2143: 语法错误: 缺少“;”(在“}”的前面)
+e:\大一下\c++作业\2018.4.4实验三\ex4\ex4\polynomial.cpp(56): error C2143: 语法错误: 缺少“;”(在“{”的前面)
+e:\大一下\c++作业\2018.4.4实验三\ex4\ex4\polynomial.cpp(56): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
