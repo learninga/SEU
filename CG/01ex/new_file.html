@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>draw a circle</title>
+    <script id="vertexshader" type="x-shader/x-vertex">
+	attribute vec4 vPostion;
+	void main(){
+		gl_Postion=vPostion;
+	}
+</script>
+<script id="fragment-shader" type="x-shader/x-fragment">
+	precision mediump float;
+	void main(){
+		gl_FragColor=vec4(1.0,0.95,0.0,1.0);
+	}
+</script>
+<script type="text/javascript" src="new_file.js"></script>
+<script type="text/javascript" src="initShaders.js"></script>
+<script type="text/javascript" src="MV.js"></script>
+<script type="text/javascript" src="webgl-utils.js"></script>
+</head>
+
+
+<body>
+<canvas id="canvas" width="400" height="400">
+    Please use a browser that supports "canvas"
+</canvas>
+</body>
+</html>

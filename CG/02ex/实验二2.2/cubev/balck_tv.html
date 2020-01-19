@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<!-- 顶点着色器-->
+<script id="vertex-shader" type="x-shader/x-vertex">
+
+attribute  vec4 vPosition;
+attribute  vec4 vColor;
+varying vec4 fColor;
+
+uniform mat4 modelViewMatrix;
+uniform mat4 viewMatrix;//视图矩阵调整视线方向
+
+void main()
+{
+    fColor = vColor;
+    gl_Position = viewMatrix*modelViewMatrix*vPosition;
+	gl_Position.z=-gl_Position.z;
+}
+</script>
+
+<script id="fragment-shader" type="x-shader/x-fragment">
+
+precision mediump float;
+
+varying vec4 fColor;
+
+void
+main()
+{
+    gl_FragColor = fColor;
+}
+</script>
+
+<script type="text/javascript" src="../Common/webgl-utils.js"></script>
+<script type="text/javascript" src="../Common/initShaders.js"></script>
+<script type="text/javascript" src="../Common/MV.js"></script>
+<script type="text/javascript" src="black_tv.js"></script>
+
+<body>
+<canvas id="gl-canvas" width="512"" height="512">
+Oops ... your browser doesn't support the HTML5 canvas element
+</canvas>
+
+<br/>
+
+
+<button id="adjustView">调整视角</button>
+
+<button id="BlackForword">黑色小电视前进</button>
+<button id="BlackBack">黑色小电视后退</button>
+<button id="BlackShun">黑色小电视顺时针旋转</button>
+<button id="BlackNi">黑色小电视逆时针旋转</button>
+<button id="BlackSmall">黑色小电视缩小</button>
+<button id="BlackBig">黑色小电视放大</button>
+
+
+<button id="PinkForword">粉色小电视前进</button>
+<button id="PinkBackword">粉色小电视后退</button>
+<button id="PinkShun">粉色小电视顺时针旋转</button>
+<button id="PinkNi">粉色小电视逆时针旋转</button>
+<button id="PinkSmall">粉色小电视缩小</button>
+<button id="PinkBig">粉色小电视放大</button>
+
+</body>
+</html>
