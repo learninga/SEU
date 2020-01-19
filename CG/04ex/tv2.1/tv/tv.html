@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<!-- 顶点着色器-->
+<script id="vertex-shader" type="x-shader/x-vertex">
+
+
+
+attribute vec4 vPosition; // 顶点位置
+attribute vec4 vNormal; // 顶点法向量
+varying vec3 N, L, E; 
+uniform mat4 modelViewMatrix; // 视图矩阵
+uniform mat4 viewMatrix;
+uniform mat4 projectionMatrix; // 投影矩阵
+uniform vec4 lightPosition; // 光照位置
+uniform mat3 normalMatrix; // 法向量矩阵
+
+	
+
+void main()
+{
+	vec3 pos = (modelViewMatrix * vPosition).xyz;
+    
+    // check for directional light 检查方向光
+    
+    if(lightPosition.w == 0.0) L = normalize(lightPosition.xyz);
+    else L = normalize( lightPosition.xyz - pos );
+    
+    E =  -normalize(pos);
+    N = normalize( normalMatrix*vNormal.xyz);
+	
+    gl_Position = projectionMatrix*viewMatrix*modelViewMatrix*vPosition;
+	gl_Position.z=-gl_Position.z;
+	
+	
+}
+</script>
+
+<script id="fragment-shader" type="x-shader/x-fragment">
+
+precision mediump float;
+
+uniform vec4 ambientProduct; // 环境光
+uniform vec4 diffuseProduct; // 漫反射
+uniform vec4 specularProduct; // 镜面反射
+uniform float shininess; // 反光度？
+varying vec3 N, L, E;
+
+void
+main()
+{
+    vec4 fColor;
+    
+    vec3 H = normalize( L + E );
+    vec4 ambient = ambientProduct;
+
+    float Kd = max( dot(L, N), 0.0 );
+    vec4  diffuse = Kd*diffuseProduct;
+
+    float Ks = pow( max(dot(N, H), 0.0), shininess );
+    vec4  specular = Ks * specularProduct;
+    
+    if( dot(L, N) < 0.0 ) specular = vec4(0.0, 0.0, 0.0, 1.0);
+
+    fColor = ambient + diffuse +specular;
+    fColor.a = 1.0;
+
+    gl_FragColor = fColor;
+}
+</script>
+
+
+<script type="text/javascript" src="../Common/webgl-utils.js"></script>
+<script type="text/javascript" src="../Common/initShaders.js"></script>
+<script type="text/javascript" src="../Common/MV.js"></script>
+<script type="text/javascript" src="tv.js"></script>
+
+<body>
+<canvas id="gl-canvas" width="800"" height="800">
+Oops ... your browser doesn't support the HTML5 canvas element
+</canvas>
+
+<br/>
+
+
+<button id="adjustView">调整视角</button>
+<button id="Circling">转圈圈</button>
+<button id="ViewBack">视角还原</button>
+<button id="CircleBack">位置还原</button>
+
+<p> </p>
+<button id="lightLeft">光源左移</button>
+<button id="lightRight">光源右移</button>
+<button id="lightFront">光源前移</button>
+<button id="lightBack">光源后移</button>
+<button id="lightUp">光源上移</button>
+<button id="lightDown">光源上移</button>
+<!-- <button id="adjustView">调整视角</button>-->
+
+<p> </p>
+<button id="BlackForword">黑色小电视前进</button>
+<button id="BlackBack">黑色小电视后退</button>
+<button id="BlackShun">黑色小电视顺时针旋转</button>
+<button id="BlackNi">黑色小电视逆时针旋转</button>
+<button id="BlackSmall">黑色小电视缩小</button>
+<button id="BlackBig">黑色小电视放大</button>
+
+<p> </p>
+<button id="PinkForword">粉色小电视前进</button>
+<button id="PinkBackword">粉色小电视后退</button>
+<button id="PinkShun">粉色小电视顺时针旋转</button>
+<button id="PinkNi">粉色小电视逆时针旋转</button>
+<button id="PinkSmall">粉色小电视缩小</button>
+<button id="PinkBig">粉色小电视放大</button> 
+
+</body>
+</html>
