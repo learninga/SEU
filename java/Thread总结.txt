@@ -1,0 +1,65 @@
+一、构建线程的方法
+1.class MyThread extends Thread{
+  public void run(){     }
+}
+2.class ThreadRunnable implements Runnable{
+public void run(){      }
+}
+
+二、其他方法
+1.sleep()  2.join()  3.interupt()  interuptted()  
+  
+三、（最重要的）构建多个线程同时进行 对数据进行加锁处理  
+加锁方式 1. synchronized 加在函数前   2.写一个block语句块 处理synchronized（）
+注意点：对什么函数进行加锁操作
+ 例：火车票在10个售票点进行出售  票的出售函数要进行加锁
+售票点为一个继承自Thread或Runnable的类  
+该类里包含一个不可改变数据量的类的私有数据成员
+构造函数参数有初始化不可改变数据量类的形式参数
+在执行的main函数里  只有一个不可同时改变的数据量  在该数据量的不可同时操作上函数加锁
+public class Ticket {
+	int id=1;
+public synchronized boolean sell(String name) {
+		if(id<=200) {
+			System.out.println(name+"售出No."+id);
+			id++;
+			return true;
+		}
+		else {
+			System.out.println("售票点 票售罄");
+			return false;
+		}
+	}
+}
+public class TrainThread extends Thread{
+	private String name;
+	Ticket ticket;
+	TrainThread(int stationNo,Ticket tick){
+		name="售票点"+(stationNo+1);
+		ticket=tick;
+	}
+	public void run() {
+		while(ticket.sell(name)) {
+			try {
+				Thread.sleep(0);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+}
+public class TrainSale {
+	public static void main(String[] args) {
+		Thread []sale=new Thread[10];
+		Ticket t=new Ticket();
+		for(int i=0;i<10;i++) {
+			sale[i]=new TrainThread(i,t);
+		}
+		//运行
+		for(int i=0;i<10;i++) {
+				sale[i].start();
+			}
+		}
+		
+	}
