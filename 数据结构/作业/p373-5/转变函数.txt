@@ -1,0 +1,50 @@
+
+void change (Graph g, int v0, int &sum) {//任意开始节点v0,得到边的总长度
+	
+             int lowcost[MAX_NUM], vset[MAX_NUM], v;//邻接节点的最短路径，被访问的标记,最后访问的节点标记
+	
+                int i, j, k, min;
+
+	v = v0;
+
+	for (int i = 0; i < g.vetexs; ++i) {
+
+	lowcost[i] = g.arcs[v0][i];
+		
+                 vset[i] = 0;
+	
+              }
+	
+vset[v0] = 1;//将v0并入树中
+	
+sum = 0;//sum清零用来累计树的权值
+	
+for (i = 0; i < g.vetexs; ++i) {
+
+		min = INF;//INF是一个比图中所有边权值都要大的树
+		
+                          for (j = 0; j < g.vetexs; ++j) //选出当前生成树到其一顶点最短边中的一条
+			
+                      if (vset[j] == 0 && lowcost[j] < min) {
+			    	
+                                       min = lowcost[j];
+				
+                                       k = j;
+			
+                               }
+		
+                      vset[j] = 1;
+		
+                      v = k;
+		
+                      sum += min;//记录最小生成树的总权值，也可以换成其他操作
+			
+                 for (j = 0; j < g.vetexs; ++j)
+			
+                        if (vset[j] == 0 && g.arcs[v][j] < lowcost[j])
+				
+                                   lowcost[j] = g.arcs[v][j];
+	
+                }
+}
+
