@@ -1,0 +1,4 @@
+﻿  源.cpp
+e:\大一下\c++作业\2018.3.7\ex4\project2\project2\源.cpp(22): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+e:\大一下\c++作业\2018.3.7\ex4\project2\project2\源.cpp(95): warning C4715: “Hugeinteger::isGreaterThan”: 不是所有的控件路径都返回值
+  Project2.vcxproj -> E:\大一下\c++作业\2018.3.7\ex4\Project2\Debug\Project2.exe
