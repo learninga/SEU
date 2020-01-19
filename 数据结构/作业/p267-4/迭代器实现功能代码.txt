@@ -1,0 +1,27 @@
+	TreeNode* next() {
+		TreeNode *top(nullptr);
+
+		TreeNode *cur(nullptr);
+		
+                                if (!s.isEmpty()) {
+	
+		top  = s.Top();
+		
+                	cur = s.Top();
+
+		s.Pop();
+			
+                               cur = cur->getRightChild();
+			
+                                 while (cur) {
+				
+                                            s.Push(cur);
+	
+		            cur = cur->getLeftChild();
+			
+                                                }
+		
+                                 }
+		
+                                  return top;
+	}

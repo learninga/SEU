@@ -1,0 +1,19 @@
+void Preorder() {
+		Stack<TreeNode*> s;
+		TreeNode *currentNode = root;
+		while (1) {
+			while (currentNode) {
+				cout << currentNode->data<<"  ";
+				s.Push(currentNode);
+				currentNode = currentNode->leftChild;
+			}
+			if (s.isEmpty())
+				return;
+			else {
+				currentNode = s.Top();
+				s.Pop();
+				currentNode = currentNode->rightChild;
+			}
+		}
+		cout << endl;
+}

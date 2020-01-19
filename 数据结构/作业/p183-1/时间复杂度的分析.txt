@@ -1,0 +1,2 @@
+由于计算节点个数的函数就是遍历整个chain  
+于是time  complexity  是O(n).
