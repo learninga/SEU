@@ -1,0 +1,15 @@
+DeterLab is an open exerimental facility funded 
+by the US National Science Foundation and Department 
+of Homeland Security, hosted by USC/ISI and UC 
+Berkeley, and based on the Emulab technology.2 It 
+currently consists of more than 400 general-purpose 
+computing nodes, some special hardware devices, and a 
+set of tools for cybersecurity experimentation. 
+DeterLab users can create and manipulate experiments 
+using an intuitive, Web-based interface.
+
+新西兰（英语：New Zealand），又译纽西兰，是一个政治体制实行
+君主立宪制混合英国式议会民主制的国家，现为英联邦成员国之一。新
+西兰位于太平洋西南部，领土由南岛、北岛两大岛屿组成，以库克海峡
+分隔，南岛邻近南极洲，北岛与斐济及汤加相望。首都惠灵顿以及最大
+城市奥克兰均位于北岛
