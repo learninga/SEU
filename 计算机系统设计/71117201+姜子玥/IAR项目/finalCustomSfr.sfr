@@ -1,0 +1,10 @@
+[Sfr]
+sfr = "P1DIR.P6",	"Memory",	0x22,	1,	base=16,	modified
+sfr = "P1IES.P2",	"Memory",	0x24,	1,	base=16,	modified
+sfr = "P1SEL.P5",	"Memory",	0x26,	1,	base=16,	modified
+sfr = "P1REN.P0",	"Memory",	0x27,	1,	base=16,	modified
+sfr = "P2OUT.P4",	"Memory",	0x29,	1,	base=16,	modified
+sfr = "TBCCTL1.CM0",	"Memory",	0x184,	2,	base=16,	modified
+
+
+[SfrGroupInfo]
