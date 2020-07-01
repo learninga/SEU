@@ -1,0 +1,7 @@
+本周同学们介绍了很多关于多端通信的内容，包括Domain Name System,, Basics of Hash Table, Flooding-based multicasting and so on. 我们的组员介绍了Flooding-based multicasting
+但我最感兴趣的是DNS，我们都知道在输入一个网址到显示整个页面中最开始的技术就是DNS技术。利用DNS可以将域名解析为IP地址。而胡昱同学介绍了DNS的工作原理、服务体系架构以及分类。
+最后我震惊地了解到中国没有IPv4的根服务器，在经过上网搜查资料后，发现因为这个原因，中国每年需要向美国交付5000亿元以上。所幸的是，中国如今有IPv6根服务器，IPv6技术越来越成熟，淘宝、支付宝、知乎等软件也都已经支持IPv6技术。
+
+This week, my classmates introduced a lot about multicasting, including Domain Name System, Basics of Hash Table, base-based multicasting and so on.
+What I'm most interested in is DNS, and we all know that the first technology to enter a url into a page is DNS.DNS can be used to resolve domain names to IP addresses.Hu yu introduced the working principle, service architecture and classification of DNS.
+Finally, I was shocked to learn that there is no IPv4 root server in China. After searching the Internet, I found that for this reason, China needs to deliver more than 500 billion yuan to the United States every year.Fortunately, China now has IPv6 root server, IPv6 technology is also becoming more and more mature.And taobao, alipay, zhihu and other softwares have also supported IPv6 technology.

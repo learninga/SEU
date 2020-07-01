@@ -1,0 +1,12 @@
+      这次小组讨论的主题Oracle数据系统。不仅仅因为最近正在学习的数据库课程中，还因为在如今的主流数据库管理系统中，oracle占比最多，使用人数也最多。
+      经过讨论后小组认为oracle属于课程介绍中middleware中的一种。
+      小组主要展示了同构DDBS、异构DDBS、客户端服务器分布式DDBS。
+      其中，同构型DDBS分为同构同质型DDBS和同构异质型DDBS，具体区别如下：同构同质型DDBS：各个场地都采用同一类型的数据模型(譬如都是关系型)，并且是同一型号的DBMS。同构异质型DDBS：各个场地采用同一类型的数据模型，但是DBMS的型号不同，譬如DB2、ORACLE、SYBASE、SQL Server等。异构型DDBS：各个场地的数据模型的型号不同，甚至类型也不同。随着计算机网络技术的发展，异种机联网问题已经得到较好的解决，此时依靠异构型DDBS就能存取全网中各种异构局部库中的数据。
+     而在讨论过程中，我个人感觉分布式数据库系统在现在以及今后的开发中会更加适用于开发过程，首先分布式数据库系统更适合分布式的管理与控制、具有灵活的体系结构、可靠性更好、可用性更强、也更加利于扩展。但相应的数据版本控制上也比较困难。
+
+
+    The topic of this panel discussion is Oracle data systems.Not just because of the recent database course, but also because oracle has the largest share and the largest number of users of today's mainstream database management systems.
+After discussion, the team decided that oracle was one of the middleware items in the course introduction.
+    The team mainly demonstrated isomorphic DDBS, heterogeneous DDBS, and client server distributed DDBS.
+    Among them, the same configuration DDBS is divided into isomorphic  and homogeneous DDBS and isomorphic and heterogeneous DDBS, the specific differences are as follows: isomorphic and homogeneous DDBS: each site adopts the same type of data model (for example, all are relational), and is the same type of DBMS.Isomorphic and heterogeneous DDBS: each site USES the same type of data model, but different types of DBMS, such as DB2, ORACLE, SYBASE, SQL Server, etc.Heterogeneous DDBS: the types and even types of data models of each site are different.With the development of computer network technology, the problem of heterogeneous machine networking has been well solved. At this time, depending on heterogeneous DDBS, data in heterogeneous local libraries in the whole network can be accessed.
+   During the discussion, I personally feel that the distributed database system will be more suitable for the development process in the present and future development. Firstly, the distributed database system is more suitable for distributed management and control, has a flexible architecture, has better reliability, stronger availability, and is more conducive to expansion.But the corresponding data version control is also difficult.

@@ -1,0 +1,2 @@
+本次展示中，我主要介绍了web hosting service，在准备过程中查阅了相关资料，我发现web hosting service存在很多的分类，但由于展示的时间限制，我主要介绍了四种最常用的分类。其中如今开发环境中最常用也是最方便的是Cloud hosting方式。
+在课后我在所有提供web hosting服务的公司中查询了各种服务的价格，发现是dedicated hosting的服务价格最为昂贵，而cloud hosting服务很多公司都提供了1元的服务器服务。相信在未来的web hosting service市场中，cloud hosting将会是发展主流

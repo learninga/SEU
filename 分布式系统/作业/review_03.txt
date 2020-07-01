@@ -1,0 +1,21 @@
+本周小组讨论主体是分布式发布订阅消息网络，我们了解到了网络的本质、互相沟通的三种方式，队列管理器之间发布分发的两种方法，在此之外，我更加好奇如今大数据中常用的分布式发布订阅模型网络有哪些具体实现。在查阅资料后，我了解到有ActiveMQ、RabbitMQ、RocketMQ以及Kafka。之后我学习了Kafka相关知识。
+Kafka是分布式发布-订阅消息系统。它最初由LinkedIn公司开发，之后成为Apache项目的一部分。Kafka是一个分布式的，可划分的，冗余备份的持久性的日志服务。它主要用于处理活跃的流式数据。Kafka可以起到两个作用：1.降低系统组网复杂度。2.降低编程复杂度，各个子系统不在是相互协商接口，各个子系统类似插口插在插座上，Kafka承担高速数据总线的作用。
+整体架构是显示分布式架构，producer、broker（kafka）和consumer都可以有多个。Producer，consumer实现Kafka注册的接口，数据从producer发送到broker，broker承担一个中间缓存和分发的作用。broker分发注册到系统中的consumer。broker的作用类似于缓存，即活跃的数据和离线处理系统之间的缓存。客户端和服务器端的通信，是基于简单，高性能，且与编程语言无关的TCP协议。
+
+它具有稳定性强、吞吐量高、支持Hadoop并行数据加载、支持通过Kafka服务器和消费机集群来分区消息的特点。
+适用场景：
+1.常规的消息系统，但不能确保消息的发送与接收绝对可靠。
+2.跟踪网站活性
+3.作为“日志收集中心”
+
+
+    The topic of this week's panel discussion is distributed publish and subscribe message network. We have learned about the nature of the network, three ways of communicating with each other, and two methods of publishing and distributing among queue managers. In addition, I am more curious about the specific implementation of distributed publish and subscribe model network commonly used in big data.After looking up the information, I found ActiveMQ, RabbitMQ, RocketMQ, and Kafka.Then I learned about Kafka.
+     Kafka is a distributed publish-subscribe messaging system.It was originally developed by the LinkedIn company and later became part of the Apache project.Kafka is a distributed, partitioned, redundant, and persistent log service.It is primarily used to process live streaming data.Kafka serves two purposes: 
+    1. It reduces the complexity of networking.
+    2. To reduce the programming complexity, each subsystem is no longer a mutual negotiation interface, each subsystem is like a socket plugged into a socket, and Kafka takes the role of a high-speed data bus.
+    The overall architecture shows a distributed architecture, where a producer, broker (kafka), and consumer can have multiple.The Producer and consumer implement the interface of Kafka registration. Data is sent from the Producer to the broker, and the broker ACTS as an intermediate cache and distribution.The broker distributes consumers registered to the system.The broker ACTS like a cache between active data and an offline processing system.Communication between client and server is based on the simple, high-performance, and programming language-independent TCP protocol.
+    It features strong stability, high throughput, support for parallel data loading of Hadoop, and support for partitioning messages through Kafka server and consumer machine clusters.
+   Applicable scenarios are as follows:
+   1. General message system, but cannot guarantee the absolute reliability of sending and receiving messages.
+   2. Track site activity
+   3. As a "log collection center"
